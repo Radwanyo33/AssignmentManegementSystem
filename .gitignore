@@ -1,0 +1,26 @@
+# Backend
+**/bin/
+**/obj/
+**/Migrations/
+appsettings.Development.json
+
+# Frontend
+**/node_modules/
+**/.next/
+**/out/
+**/.env.local
+**/.env*.local
+**/*.log
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# OS
+.DS_Store
+Thumbs.db.vs/
+Backend/AssignmentManagement/.vs/
