@@ -1,4 +1,3 @@
-// src/services/user.service.ts
 import { api } from './api';
 import { User } from '@/types';
 

@@ -1,14 +1,13 @@
-// src/app/(dashboard)/admin/classes/page.tsx
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation'; // ✅ Add this import
+import { useRouter } from 'next/navigation'; 
 import DashboardLayout from '@/components/layouts/DashboardLayout';
 import { classService } from '@/services/class.service';
 import { Class } from '@/types';
 
 export default function ClassManagement() {
-    const router = useRouter(); // ✅ Add router
+    const router = useRouter(); 
     const [classes, setClasses] = useState<Class[]>([]);
     const [loading, setLoading] = useState(true);
     const [showModal, setShowModal] = useState(false);
@@ -131,7 +130,7 @@ export default function ClassManagement() {
                             <p className="text-sm text-gray-500">Manage classes and their assigned teachers</p>
                         </div>
                         <button
-                            onClick={openCreateModal}
+                            onClick={() => router.push('/admin/classes/add')}
                             className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         >
                             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
