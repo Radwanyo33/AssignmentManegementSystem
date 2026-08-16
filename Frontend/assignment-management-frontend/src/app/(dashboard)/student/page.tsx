@@ -4,13 +4,13 @@ import { useEffect, useState } from "react";
 import DashboardLayout from "@/components/layouts/DashboardLayout";
 import { assignmentService } from "@/services/assignment.service";
 import { submissionService } from "@/services/submission.service";
-import { Assignment, Submission } from "@/types";
+import { AssignmentDto, Submission } from "@/types";
 
 // prevent static generation
 export const dynamic = 'force-dynamic';
 
 export default function StudentDashboard() {
-    const [assignments, setAssignments] = useState<Assignment[]>([]);
+    const [assignments, setAssignments] = useState<AssignmentDto[]>([]);
     const [submissions, setSubmissions] = useState<Submission[]>([]);
     const [loading, setLoading] = useState(true);  // ✅ Start with true
     const [isMounted, setIsMounted] = useState(false);  // ✅ Add isMounted

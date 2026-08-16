@@ -4,11 +4,11 @@ import { useEffect, useState } from 'react';
 import DashboardLayout from '@/components/layouts/DashboardLayout';
 import { assignmentService } from '@/services/assignment.service';
 import { submissionService } from '@/services/submission.service';
-import { Assignment, Submission } from '@/types';
+import { AssignmentDto, Submission } from '@/types';
 import Link from 'next/link';
 
 export default function StudentAssignments() {
-  const [assignments, setAssignments] = useState<Assignment[]>([]);
+  const [assignments, setAssignments] = useState<AssignmentDto[]>([]);
   const [submissions, setSubmissions] = useState<Submission[]>([]);
   const [loading, setLoading] = useState(true);
 

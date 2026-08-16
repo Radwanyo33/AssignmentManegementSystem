@@ -15,6 +15,17 @@ export const authService = {
         return response.data;
     },
 
+    // Add the register method
+    async register(data : {
+        email: string;
+        fullName: string;
+        password: string;
+        role: string;
+    }) : Promise<any>{
+        const response = await api.post('/auth/register', data);
+        return response.data;
+    },
+
     logout(): void {
         if (isBrowser()) {
             localStorage.removeItem('token');

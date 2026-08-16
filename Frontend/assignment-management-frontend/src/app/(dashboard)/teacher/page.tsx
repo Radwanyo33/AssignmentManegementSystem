@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import DashboardLayout from '@/components/layouts/DashboardLayout';
 import { assignmentService } from '@/services/assignment.service';
-import { Assignment } from '@/types';
+import { AssignmentDto } from '@/types';
 import { useRouter } from 'next/navigation';
 
 // Prevent static generation
@@ -11,7 +11,7 @@ export const dynamic = 'force-dynamic';
 
 export default function TeacherDashboard() {
     const router = useRouter();
-    const [assignments, setAssignments] = useState<Assignment[]>([]);
+    const [assignments, setAssignments] = useState<AssignmentDto[]>([]);
     const [loading, setLoading] = useState(true);
     const [isMounted, setIsMounted] = useState(false);
 
